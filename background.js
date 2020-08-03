@@ -53,9 +53,11 @@ function urlShorten(url) {
 		},
 		success: function(response) {
 			try {
-				var shortUrl = response.shortUrl;
-				saveToStorage(url, shortUrl);
-				copyTextToClipboard(shortUrl);
+				if(response.success) {
+					var shortUrl = response.shortUrl;
+					saveToStorage(url, shortUrl);
+					copyTextToClipboard(shortUrl);
+				}
 			} catch(e) {
 				reject(Error(e));
 			}
