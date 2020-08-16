@@ -31,6 +31,9 @@ function loadingState() {
 function removeLoader() {
 	$(".loading")
 		.addClass("hide");
+}
+
+function addUrlContainer() {
 	$(".url-container")
 		.removeClass("hide");
 }
@@ -46,7 +49,7 @@ function handleActions(lurl, resp) {
 	saveToStorage(lurl, resp.shortUrl);
 	pasteToInputBox(resp.shortUrl);
 	removeLoader();
-
+	addUrlContainer();
 	generateQRCode(resp.shortUrl);
 }
 
