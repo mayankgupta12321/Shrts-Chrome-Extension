@@ -44,7 +44,7 @@ function saveToStorage(lurl, surl) {
 function urlShorten(url) {
 	$.ajax({
 		type: 'POST',
-		url: 'https://shrts.herokuapp.com/api/url/',
+		url: 'https://shrts.cyclic.app/api/url/',
 		data: {
 			longUrl: url
 		},
