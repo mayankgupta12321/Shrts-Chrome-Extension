@@ -58,7 +58,7 @@ function urlShorten(url) {
 	var t;
 	var xhr = $.ajax({
 		type: 'POST',
-		url: 'https://shrts.herokuapp.com/api/url/',
+		url: 'https://shrts.cyclic.app/api/url/',
 		data: {
 			longUrl: url
 		},
@@ -103,7 +103,7 @@ function onWindowLoad() {
 		}
 		if(isUrlShortened(tablink)) {
 			$(".error")
-				.text("shrts.herokuapp.com/ URL can't be Shortened")
+				.text("shrts.cyclic.app/ URL can't be Shortened")
 				.removeClass("hide");
 			return 0;
 		}
@@ -133,7 +133,7 @@ function onWindowLoad() {
 	}
 
 	function isUrlShortened(url) {
-		if (url.indexOf("https://shrts.herokuapp.com") !== -1 || url.indexOf("http://shrts.herokuapp.com") !== -1 || url.indexOf("shrts.herokuapp.com") !== -1) {
+		if (url.indexOf("https://shrts.cyclic.app/") !== -1 || url.indexOf("http://shrts.cyclic.app/") !== -1 || url.indexOf("shrts.cyclic.app/") !== -1) {
 			return true;
 		}
 		return false;
